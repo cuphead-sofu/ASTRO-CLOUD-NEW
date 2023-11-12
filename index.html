@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サインアップとログイン</title>
+    <style>
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>サインアップ</h2>
+    <form id="signupForm">
+        <label for="signupUsername">ユーザー名:</label>
+        <input type="text" id="signupUsername" name="signupUsername" required>
+
+        <label for="signupPassword">パスワード:</label>
+        <input type="password" id="signupPassword" name="signupPassword" required>
+
+        <button type="button" onclick="signup()">サインアップ</button>
+    </form>
+
+    <h2>ログイン</h2>
+    <form id="loginForm">
+        <label for="loginUsername">ユーザー名:</label>
+        <input type="text" id="loginUsername" name="loginUsername" required>
+
+        <label for="loginPassword">パスワード:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required>
+
+        <button type="button" onclick="login()">ログイン</button>
+    </form>
+
+    <script>
+        function signup() {
+            var username = document.getElementById("signupUsername").value;
+            var password = document.getElementById("signupPassword").value;
+
+            // サーバーサイドの処理を模擬
+            console.log("新規登録: ユーザー名 - " + username + ", パスワード - " + password);
+        }
+
+        function login() {
+            var username = document.getElementById("loginUsername").value;
+            var password = document.getElementById("loginPassword").value;
+
+            // サーバーサイドの処理を模擬
+            console.log("ログイン: ユーザー名 - " + username + ", パスワード - " + password);
+        }
+    </script>
+
+</body>
+</html>
 
